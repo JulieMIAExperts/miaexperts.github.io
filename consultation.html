@@ -32,34 +32,73 @@
     </div>
 
   <div class="container">
-      <h1 class="gradient-text">Bienvenue chez MIA Experts version Bêta</h1>
-      <p>Dans cette aide en ligne de notre logiciel actuellement en version bêta, vous y trouverez les informations essentielles pour découvrir ses fonctionnalités, prendre en main l’outil et nous faire part de vos retours afin de contribuer à son amélioration.</p>
+      <h1 class="gradient-text">Evènement de consultation</h1>
+      <p>La consultation médicale dans MIA Experts est conçue comme un espace structuré permettant de documenter le raisonnement clinique, de centraliser les informations médicales du patient et de préparer les suites de la prise en charge</p>
   </div>
 
    <div class="container">   
-       <p>Cette page a pour objectif de présenter les principales fonctionnalités de la plateforme MIA Experts et de vous accompagner dans l'utilisation quotidienne du logiciel.
-Vous pouvrrez retrouver notamment la gestion des patients, des consultations, des documents médico-administratifs et le suivi chirurgical.</p>         
-    <p>Le manuel est structuré selon une logique progressive, correspondant au parcours naturel de l’utilisateur :</p>
-     <p>L'accès à la plateforme</p>
-     <p>Utilisation de l'agenda</p>
-     <p>Gestion du dossier patient</p>
-     <p>Création et suivi des consultations</p>
-     <p>Production des documents médico-administratifs</p>
-     <p>Gestion du bloc opératoire</p>
-     <p>Paramétrage du logiciel et profil utilisateur</p>
+      <h1 class="gradient-text">Entête et colonne latérale de la consultation</h1>
+       <p>L'en-tête présente sur l'évènement de consultation permet de visualiser en un coup d'œil les informations essentielles du patient : son identité, son âge, sa date de naissance et le motif de consultation. Il permet également d'ajouter une note, accessible à plusieurs endroits du logiciel.</p>         
+    <p>Sur la droite, des actions rapides sont disponibles : la facturation, l'activation de l'écoute lors de l'échange, ainsi que la réinitialisation de la saisie médicale si nécessaire.</p>
+ <img src="images/enteteconsultation.png" alt="Entête consultation" class="image-simple">
+     <p>La colonne latérale gauche affiche en permanence les éléments clés du dossier patient :</p>
+     <p>- biométrie,</p>
+     <p>- pathologies,</p>
+     <p>- données physiques,</p>
+     <p>- antécédents médicaux et chirurgicaux,</p>
+     <p>- allergies,</p>
+     <p>- traitements en cours </p>
+     <p>Cette vue permet au praticien de disposer des informations essentielles sans avoir à quitter l’écran de consultation.</p>
+      <img src="images/donneespatient1.png" alt="Données du patient" class="image-simple">
+     <img src="images/donneespatient2.png" alt="Données du patient" class="image-simple">
+     <p>Les informations peuvent être ajoutées manuellement ou par dictée vocale notamment lors d’un évènement de consultation, voir page suivante 
+Synthèse et Conclusion </p>
+     
   </div>
       
   <div class="container">   
-       <p>Au lancement du locigiel, vous devrez vous connecter avec vos identifiants ou via Pro santé connect.</p>
-       <img src="images/identification.png" alt="Identification" class="image-simple">
+       <h1 class="gradient-text">Synthèse et conclusion</h1>   
+    <p>La zone centrale affiche les informations propres à la consultation en cours, notamment la “synthèse” puis la “conclusion et conduire à tenir”. </p>
+    <p>La zone centrale affiche les informations propres à la consultation en cours, notamment la “synthèse” puis la “conclusion et conduire à tenir”. 
+Cette zone peut être alimentée de 3 façons différentes : par saisie manuelle, par dictée vocale via les boutons dédiés, et par choix d’une “trame de consultation type”.</p>
+       <p>La synthèse médicale permet de formaliser le raisonnement clinique au cours de la consultation.
+Elle comprend notamment :</p>
+    <p>- le motif de la visite,</p>
+    <p>- l’histoire de la maladie,</p>
+    <p>- l’examen clinique,</p>
+    <p>- l'examen paraclinique.</p>
+    <p>Cette structuration favorise une documentation claire, lisible et homogène des consultations, tout en facilitant la relecture ultérieure du dossier patient.</p>
+    <p>Le bouton "Lancer l'écoute" active la reconnaissance vocale et permet de capter l'ensemble des éléments communiqués au cours de la consultation, y compris ceux exprimés par le patient. Pour arrêter l'enregistrement, appuyer à nouveau sur le même bouton.</p>
+        <img src="images/menuconsultation.png" alt="Menu de l'écran de consultation" class="image-simple">
+    
+       <p>Cliquer ensuite sur l'icône IA (représentée par des étoiles) afin de retranscrire automatiquement les éléments captés dans les différentes sections : la colonne latérale gauche (voir article Entête et colonne latérale de la consultation) ainsi que la synthèse.</p>
+      <img src="images/synthese.png" alt="Synthèse" class="image-simple">
       
-       <p>MIA intègre un agenda synchronisé avec Doctolib (si vous avez déjà un abonnement avec eux). Tous les rendez-vous pris sur Doctolib y apparaissent automatiquement.Les informations du patient y seront reportées</p>
-      <img src="images/agenda.png" alt="Agenda" class="image-simple">
+      <p>Durant la génération de la synthèse, le praticien a la possibilité d'enrichir le contenu en relançant la reconnaissance vocale directement depuis cette section. La synthèse reste modifiable à tout moment en saisissant directement le texte souhaité.</p>
+       <img src="images/microsynthese.png" alt="Dictée synthèse" class="image-simple">
       
-      <p>Pour plus de lisibilité, l'agenda dispose de deux couleurs afin de distinguer les rendez-vous de consultations (en bleu) et les blocs opératoires (en rose).</p>
-       <img src="images/couleursagenda.png" alt="Couleurs Agenda" class="image-simple">
-      
-      <p>En cliquant sur le rendez-vous le dossier du patient s'ouvre sur l'évènement (<span style="color: #027FFE; font-weight: 600; font-weight: bold;">consultation</span> ou <span style="color: #C65BAD; font-weight: 600; font-weight: bold;">bloc opératoire</span>)</p>
+      <p>L’option “ trame de consultation type” permet d’appliquer un type de trame configurée au préalable depuis les paramètres (Trame > Trame de consultation), afin de gagner du temps lors de la rédaction de la synthèse.</p>
+    <p>Pour cela, cliquer sur le modèle de trame approprié au cas du patient parmi celles proposées </p>
+    <img src="images/modeletrame.png" alt="Modèles de trame" class="image-simple">
+    <p>Puis cliquer sur le bouton permettant de copier le modèle sur la synthèse.</p>
+     <img src="images/copiertrame.png" alt="Copier la trame" class="image-simple">
+    <p>Le bandeau passe alors en : "Appliquée à la consultation”.</p>
+    <img src="images/trameappliquee.png" alt="Trame appliquée" class="image-simple">
+    <p>Il ne reste plus qu'à faire la différence sur la synthèse au niveau des variables, soit manuellement en cliquant sur les variables directement, soit par la dictée vocale. </p>
+    <img src="images/tramesynthese.png" alt="Trame dans la synthèse" class="image-simple">
+    
+    <p>La conclusion de la consultation permet de synthétiser les décisions médicales prises et de définir la conduite à tenir. </p>
+    <p>Elle ne doit être alimentée qu’une fois la synthèse vérifiée et finalisée. </p>
+    <p>Par dictée vocale, la conclusion et la conduite à tenir sont générées simultanément en intégrant les aspects administratifs, les documents associés, un nouvel évènement de bloc qui s’ajoutera automatiquement à l’agenda (voir pages suivantes Documents associés  
+Module planification du bloc opératoire) </p>
+  <p>Elles peuvent inclure :</p>
+    <p>- les examens complémentaires à réaliser,</p>
+    <p>- les orientations thérapeutiques,</p>
+    <p>- les propositions de suivi,</p>
+    <p>- la décision de programmer une intervention ou un acte spécifique.</p>
+    <p>Cette section constitue un élément clé de la continuité des soins et sert de référence pour les étapes suivantes du parcours patient.</p>
+     <img src="images/conclusion.png" alt="Conclusion" class="image-simple">
+    <p>Les informations saisies sont immédiatement intégrées au dossier patient et à la timeline médicale.</p>    
   </div>
 
 
@@ -99,25 +138,7 @@ Vous pouvrrez retrouver notamment la gestion des patients, des consultations, de
       <img src="images/modifierdate2.png" alt="Valider" class="image-simple">
  </div>
       
- <div class="container">
-   <h1 class="gradient-text">Bloc opératoire</h1>     
-   <p>Depuis un clic sur le rendez-vous de consultation, le dossier patient s'ouvre</p>
-    <img src="images/dossierblocoperatoire.png" alt="Modifier la date" class="image-simple">
-   
-    
 
-      
-
-
-  </div>
-    
- <div class="container">
-      <p>
-        Vous saurez tout sur notre logiciel à partir de cette merveilleuse page.
-        qui a été faite par nos soins et qui va nous servir pour la sofcot, tout ça tout ça.
-        Biensur vous pouvez prendre rdv avec notre merveilleux Vincent pour une démonstration.
-      </p>
- </div>
   </main>
 
   <script src="script.js"></script>
