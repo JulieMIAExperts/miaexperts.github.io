@@ -26,59 +26,78 @@ body {
   min-height: 100vh;
 }
 
-/* --- MENU GAUCHE TRANSPARENT & FLOU --- */
+/* --- MENU HORIZONTAL FIXE EN HAUT --- */
 .menu-gauche {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 180px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  border-right: 1px solid rgba(0, 38, 76, 0.15);
-  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 38, 76, 0.15);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   z-index: 1000;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .menu-gauche ul {
   list-style: none;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
   margin: 0;
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .menu-gauche li {
-  width: 100%;
-  text-align: center;
-  margin: 12px 0;
+  margin: 0;
+  flex: 0 0 auto;
 }
 
 .menu-gauche a {
   display: block;
   color: #00264C;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px 16px;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
 .menu-gauche a:hover,
 .menu-gauche a.active {
   background: rgba(2, 127, 254, 0.15);
-  border-radius: 8px;
-  transform: scale(1.05);
+  color: #015fcc;
+  transform: translateY(-1px);
+}
+
+/* Scrollbar discrète */
+.menu-gauche::-webkit-scrollbar {
+  height: 6px;
+}
+
+.menu-gauche::-webkit-scrollbar-thumb {
+  background: rgba(2, 127, 254, 0.25);
+  border-radius: 10px;
+}
+
+.menu-gauche::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* --- CONTENU PRINCIPAL --- */
 .main-content {
-  margin-left: 180px;
-  padding: 40px;
-  transition: margin-left 0.2s;
+  margin-left: 0;
+  padding: 95px 40px 40px;
+  transition: 0.2s;
   color: #00264C;
 }
 
@@ -89,15 +108,14 @@ body {
 }
 
 .logo img {
-  width: 180px;  /* taille augmentée */
+  width: 180px;
   height: auto;
   transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.05); /* petit effet élégant au survol */
+  transform: scale(1.05);
 }
-
 
 /* --- CONTENEUR AVEC FOND VERRE DÉPOLI --- */
 .container {
@@ -110,43 +128,51 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-   margin-bottom: 40px; /* espace entre deux blocs */
+  margin-bottom: 40px;
 }
 
 /* --- ESPACEMENT ENTRE LES PARAGRAPHES DANS LES BLOCS DE TEXTE --- */
 .container p {
-  margin-bottom: 23px;  /* espace entre les paragraphes */
-  line-height: 1.6;     /* rend la lecture plus fluide */
+  margin-bottom: 23px;
+  line-height: 1.6;
 }
-.container h1, .container h2, .container h3 {
+
+.container h1,
+.container h2,
+.container h3 {
   margin-top: 0;
-  margin-bottom: 20px;  /* espace sous le titre */
+  margin-bottom: 20px;
 }
 
 h1.gradient-text {
   font-size: 1.8em;
   font-weight: 700;
-  background: linear-gradient(90deg, #027FFE, #C65BAD); /* bleu → rose */
+  background: linear-gradient(90deg, #027FFE, #C65BAD);
   text-align: left;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* pour compatibilité */
+  background-clip: text;
 }
 
-
-/* pour éviter un grand vide en bas de page */
+/* Pour éviter un grand vide en bas de page */
 .container:last-of-type {
   margin-bottom: 0;
 }
 
-
 /* --- ANIMATION D'APPARITION DU CONTENU --- */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.container, .logo {
+.container,
+.logo {
   animation: fadeIn 1s ease forwards;
 }
 
@@ -157,7 +183,8 @@ form {
   gap: 12px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(0, 38, 76, 0.3);
@@ -166,6 +193,7 @@ input, textarea {
   color: #00264C;
   font-size: 1em;
   backdrop-filter: blur(5px);
+  box-sizing: border-box;
 }
 
 input::placeholder,
@@ -190,52 +218,15 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 800px) {
-  .menu-gauche {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 38, 76, 0.2);
-    box-shadow: none;
-    backdrop-filter: blur(8px);
-  }
-
-  .menu-gauche ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding-top: 20px;
-  }
-
-  .container {
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .footer {
-  margin-left: 0; /* sur mobile, le menu passe en haut donc on enlève la marge */
-  }
-}
-
 /* --- IMAGES DANS LES CONTAINERS --- */
 .image-simple {
   display: block;
-  max-width: 100%;      /* empêche l’image de dépasser */
-  height: auto;         /* conserve les proportions */
-  border-radius: 12px;  /* arrondit légèrement les coins */
-  margin: 20px auto;    /* centre l’image et ajoute de l’espace */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 
 /* --- PIED DE PAGE AVEC LIGNE DÉGRADÉE --- */
 .footer {
@@ -267,13 +258,14 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 /* --- VIDÉO LOOM CENTRÉE DANS LE CONTENEUR --- */
 .video-loom {
   position: relative;
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
-  margin: 30px auto; /* <-- le centrage clé */
+  margin: 30px auto;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -294,35 +286,52 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* espace entre les images */
-  flex-wrap: wrap; /* pour repasser en colonne sur petit écran */
+  gap: 20px;
+  flex-wrap: wrap;
   margin: 20px auto;
 }
 
 .image-row img {
-  width: 45%;               /* deux images côte à côte avec marge */
+  width: 45%;
   height: auto;
-  border-radius: 15px;      /* coins arrondis */
+  border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .image-row img:hover {
-  transform: scale(1.03);   /* effet zoom doux au survol */
+  transform: scale(1.03);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 800px) {
+  .menu-gauche ul {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .menu-gauche a {
+    padding: 8px 12px;
+    font-size: 0.95em;
+  }
+
+  .main-content {
+    padding: 90px 20px 20px;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
 }
 
 /* --- ADAPTATION MOBILE --- */
 @media (max-width: 700px) {
   .image-row img {
-    width: 100%;  /* sur mobile, les images passent l'une sous l'autre */
+    width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
