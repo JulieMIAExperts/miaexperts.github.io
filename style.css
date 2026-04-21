@@ -72,19 +72,19 @@ body {
   transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
-.menu-gauche a[href="contact.html"] {
+.menu-gauche a[href="https://script.google.com/macros/s/AKfycbx2rix9QVG91ba91YfKStlZv4J-v4efeJkKswRMFvtlwhJfOnnOc_HyroVUo-hIYODI/exec"] {
   background: linear-gradient(90deg, #027FFE, #C65BAD);
   color: white;
   box-shadow: 0 4px 12px rgba(2, 127, 254, 0.25);
 }
 
-.menu-gauche a[href="contact.html"]:hover {
+.menu-gauche a[href="https://script.google.com/macros/s/AKfycbx2rix9QVG91ba91YfKStlZv4J-v4efeJkKswRMFvtlwhJfOnnOc_HyroVUo-hIYODI/exec"]:hover {
   background: linear-gradient(90deg, #026fe0, #b94ea1);
   color: white;
   transform: translateY(-1px) scale(1.03);
 }
 
-.menu-gauche a[href="contact.html"].active {
+.menu-gauche a[href="https://script.google.com/macros/s/AKfycbx2rix9QVG91ba91YfKStlZv4J-v4efeJkKswRMFvtlwhJfOnnOc_HyroVUo-hIYODI/exec"].active {
   background: linear-gradient(90deg, #027FFE, #C65BAD);
   color: white;
 }
